@@ -1,0 +1,26 @@
+@import '../../colors';
+
+.headerButton,
+.headerButton_active {
+  padding: 0 0.7em;
+  font-size: 50%;
+  font-weight: normal;
+  font-family: Open Sans, sans-serif;
+  color: $main-bg-text-color;
+  background-color: transparent;
+  display: inline-block;
+  text-align: right;
+  line-height: 8vh;
+}
+
+.headerButton:hover,
+.headerButton_active:hover {
+  color: $main-bg-highlighted-text-color;
+  margin-top: 0;
+}
+
+.headerButton_active {
+  font-weight: bold;
+  color: $main-bg-highlighted-text-color;
+  background-color: $main-bg-hover-color;
+}

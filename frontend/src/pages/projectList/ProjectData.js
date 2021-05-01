@@ -65,3 +65,35 @@ export const projects = [
         deadline: 1640991599
     },
 ];
+export const columnsOfTable = [
+    {
+        title: 'projektkód',
+        dataIndex: 'id',
+        key: 'id',
+    },
+    {
+        title: 'tárgy',
+        dataIndex: 'projectName',
+        key: 'projectName',
+    },
+    {
+        title: 'tevékenység',
+        dataIndex: 'type',
+        key: 'type',
+    },
+    {
+        title: 'Támogatási Összeg',
+        dataIndex: 'amount',
+        key: 'amount',
+    },
+    {
+        title: 'Kezdet',
+        dataIndex: 'starting',
+        key: 'starting',
+    },
+    {
+        title: 'Határidő',
+        dataIndex: 'deadline',
+        key: 'deadline',
+    },
+]

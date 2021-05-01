@@ -1,0 +1,41 @@
+@import '../../colors';
+
+.app-header {
+  background-color: $main-bg-color;
+  font-size: 5.5vh;
+  height: 8vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  .logo {
+    height: 8vh;
+  }
+ 
+  .companyData {
+    display: flex;
+    margin: auto;
+  }
+  
+  .companyName {
+    font-size: 45%;
+    font-family: Work Sans, sans-serif;
+    text-align: left;
+    font-weight: bold;
+    height: 8vh;
+    background-color: white;
+    margin: auto;
+    padding-right: 2em;
+  }
+
+  .userName {
+    margin: auto 0;
+    text-align: right;
+    padding-right: 0.7em;
+    font-size: 45%;
+  }
+
+  .headerButtons {
+    margin-top: 0;
+  }
+}

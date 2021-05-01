@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function ProjectItem(projectData) {
+export default function ProjectItem({projectData}) {
 
     return (
         <p className="ProjectName">
-        {projectData.projectData}
+            {projectData}
         </p>
     )
 }
