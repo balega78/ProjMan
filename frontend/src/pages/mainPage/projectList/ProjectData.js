@@ -67,7 +67,7 @@ export const projects = [
 ];
 export const columnsOfTable = [
     {
-        title: 'projektkód',
+        title: '',
         dataIndex: 'id',
         key: 'id',
     },

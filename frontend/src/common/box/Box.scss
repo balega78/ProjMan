@@ -1,0 +1,16 @@
+@import '../../colors.scss';
+
+$border-radius: 10px;
+
+.box {
+  background-color: $main-bg-color;
+  border-radius: $border-radius;
+  margin: auto;
+  width: 35%;
+}
+
+.box-header {
+  border-radius: $border-radius $border-radius 0 0;
+  padding: 5px 0;
+  text-align: center;
+}

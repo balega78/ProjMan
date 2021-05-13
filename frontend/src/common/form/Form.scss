@@ -1,0 +1,38 @@
+@import '../../colors.scss';
+
+.projman-form {
+  font-size: 16px;
+
+  .form-content {
+    padding: 20px;
+    height: fit-content;
+  }
+
+  .form-buttons {
+    text-align: right;
+  }
+
+  button {
+    background-color: rgb(67, 71, 71);
+    color: white;
+    border: none;
+    padding: 7px;
+    margin-top: 5%;
+    border-radius: 5px;
+    font-size: 100%;
+    width: 35%;
+  }
+
+  button:hover {
+    background-color: $main-bg-hover-color;
+    transition: 0.3s;
+  }
+
+  .message {
+    color: $error;
+    font-weight: 600;
+    float: left;
+    text-align: start;
+    margin: 0;
+  }
+}

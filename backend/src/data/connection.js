@@ -15,10 +15,8 @@ export const db = {
       pool.query(query, values, (err, results, fields) => {
         if (err) {
           reject(err);
-
           return;
         }
-
         resolve({ results, fields });
       });
     });

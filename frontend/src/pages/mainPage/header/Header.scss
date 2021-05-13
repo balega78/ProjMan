@@ -1,0 +1,50 @@
+@import '../../../colors';
+
+.app-header {
+  background-color: $main-bg-color;
+  font-size: 3vh;
+  height: 10vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+
+  
+  .companyData {
+    display: flex;  
+    margin: auto 0;
+  }
+  
+  .logo {
+    height: 9vh;
+    margin: auto;
+  }
+
+  .companyName {
+    font-size: 2.3vh;
+    font-family: Work Sans, sans-serif;
+    text-align: left;
+    font-weight: bold;
+    height: 9vh;
+    background-color: white;
+    padding-right: 10vh;
+  margin: auto 0;
+  }
+
+  .nametext {
+    margin: auto;
+    line-height: 3vh;
+  }
+
+  .headerButtons {
+    margin: auto 0;
+  }
+  
+  .userName {
+    font-size: 2.3vh;
+    margin: auto 0;
+    text-align: right;
+    padding-right: 0.7em;
+  }
+
+
+}

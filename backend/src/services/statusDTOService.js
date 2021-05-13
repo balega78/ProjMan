@@ -38,7 +38,7 @@ export const error = {
   },
 }
 
-export const tribesError = (err, messageParams) => {
+export const projmanError = (err, messageParams) => {
   const errObject = { ...err }
   if (messageParams != undefined && errObject.createMessage != undefined) {
     const errorMessage = errObject.createMessage(messageParams)

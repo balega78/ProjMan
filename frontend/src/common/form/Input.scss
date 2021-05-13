@@ -1,0 +1,29 @@
+@import '../../colors.scss';
+
+.form-input {
+  input {
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    margin: 10px 0;
+    border-bottom: rgb(149, 146, 146) 1px solid;
+    color: $highlight-color;
+    font-weight: 600;
+  }
+
+  input:disabled {
+    background-color: lightgray;
+  }
+
+  input::placeholder {
+    color: rgb(165, 162, 162);
+  }
+
+  .inputError {
+    border-bottom: $error 1px solid;
+  }
+
+  .inputSuccess {
+    border-bottom: $success 2px solid;
+  }
+}

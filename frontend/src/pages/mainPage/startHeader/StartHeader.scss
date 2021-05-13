@@ -1,0 +1,53 @@
+@import '../../../colors';
+
+.app-header-sh-1st {
+  background-color: $main-bg-color;
+  height: 2vh;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.app-header-sh {
+  background-color: $main-bg-color;
+  font-size: 3vh;
+  height: 20vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  
+  .mainlogobox {
+    background-color: white;
+    display: flex;  
+    height: 15vh;
+    border-radius: 10px;
+    width: 35%;
+    margin: auto;
+  }
+  
+  .logo-sh {
+    margin: auto 0;
+    height: 14vh;
+  }
+
+  .companyName-sh {
+    font-size: 2.3vh;
+    letter-spacing: 2px;
+    font-weight:500;
+    font-family: Work Sans, sans-serif;
+    text-align: left;
+    height: 12vh;
+    background-color: white;
+    margin: auto 0;
+  }
+  
+  .nametext {
+    margin: auto 0;
+    line-height: 4vh;
+  }
+
+  .headerButtons-sh {
+    margin: auto;
+  }
+}
+
+
