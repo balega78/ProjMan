@@ -37,14 +37,15 @@ export const login = (username, password) => async dispatch => {
   dispatch(loginRequest);
   const res = await apiService.post('/login', { username, password }, false);
   console.log(await res);
-  if ((!!res.status && res.status == 'error') || !res.token) {
+  if ((!!res.status && res.status == 'error') || !res.token || !res.rights) {
     dispatch(setError('Error'));
     dispatch(loginFailure);
   } else {
     dispatch(loginSuccess(res.token, username));
     localStorage.setItem('token', res.token);
+    localStorage.setItem('rights', res.rights);
     localStorage.setItem('user', username);
-    //localStorage.setItem('userType', userType);
+    
     history.push('/projektek');
   }
 };

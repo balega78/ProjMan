@@ -39,7 +39,8 @@ export const loginService = {
       { expiresIn: process.env.TOKEN_EXPIRE })
     return {
       status: "ok",
-      token: token
+      token: token, 
+      rights: user.rights
     }
   },
 }

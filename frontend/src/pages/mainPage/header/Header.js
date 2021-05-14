@@ -44,6 +44,7 @@ function Header({ user, logout }) {
       onClick: () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
+        localStorage.removeItem('rights');
         logout()
         changeActiveButton('Kilépés');
       },

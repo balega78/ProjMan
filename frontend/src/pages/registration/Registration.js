@@ -13,6 +13,7 @@ const Registration = () => {
   const [inputStates, setInputStates] = useState({
     username: false,
     password: false,
+    rights: false
   });
   const [inputs, setInputs] = useState({});
   const [backendError, setBackendError] = useState('');
@@ -70,7 +71,7 @@ const Registration = () => {
           />
           <Input
             isSubmited={isSubmited}
-            name="email"
+            name="rights"
             type="text"
             hungarianName="jogosultság"
             onChange={inputChange}

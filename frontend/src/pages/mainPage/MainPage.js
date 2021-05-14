@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ProjectStat from './ProjectStat';
 import { Router, Switch, Route } from 'react-router-dom';
 import history from '../../history';
@@ -8,7 +8,7 @@ import Login from '../login/Login'
 import Registration from '../registration/Registration'
 import { connect } from 'react-redux'
 
-function MainPage({user}) {
+function MainPage({user, rights}) {
 
 
   return (
@@ -40,6 +40,7 @@ function MainPage({user}) {
 const mapStateToProps = state => {
   return {
     user: state.login.user,
+    rights: state.login.rights,
   };
 };
 
