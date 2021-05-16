@@ -5,9 +5,9 @@ import { verifyAccesToken } from '../middlewares/authenticationMiddleware'
 import {
   loginController,
   registerController,
+  projectController
 }
   from '../controllers';
-import { userController } from '../controllers/userController';
 
 const router = express.Router();
 
@@ -17,7 +17,7 @@ router.post('/login', loginController.login)
 router.post('/registration', registerController.post);
 
 router.use(verifyAccesToken);
-router.get('/user', userController.getUser)
+router.get('/projektek', projectController.get)
 //from here I can get use of token
 
 export default router;

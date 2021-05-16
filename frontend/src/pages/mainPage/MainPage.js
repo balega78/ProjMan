@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectStat from './ProjectStat';
+import ProjectStat from './component/ProjectStat';
 import { Router, Switch, Route } from 'react-router-dom';
 import history from '../../history';
 import Header from './header/Header';
@@ -9,7 +9,6 @@ import Registration from '../registration/Registration'
 import { connect } from 'react-redux'
 
 function MainPage({user, rights}) {
-
 
   return (
     <div className="App">

@@ -37,7 +37,7 @@ export const login = (username, password) => async dispatch => {
   dispatch(loginRequest);
   const res = await apiService.post('/login', { username, password }, false);
   console.log(await res);
-  if ((!!res.status && res.status == 'error') || !res.token || !res.rights) {
+  if ((!!res.status && res.status === 'error') || !res.token || !res.rights) {
     dispatch(setError('Error'));
     dispatch(loginFailure);
   } else {

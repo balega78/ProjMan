@@ -14,26 +14,26 @@ export const loginService = {
     } else if (!password) {
       throw projmanError(error.MISSING_INPUT, 'password')
     }
-    const userResponse = await loginService.returnUserResponseFromDB(username, password)
+    const userResponse = await loginService.authenticateUser(username, password)
     return await loginService.generateUserToken(userResponse)
   },
 
-  returnUserResponseFromDB: async (username, password) => {
+  authenticateUser: async (username, password) => {
     let isPasswordValid = false
-    const responseFromDatabase = await User.findUserByUsername(username)
+    const getUserFromDB = await User.findUserByUsername(username)
     let usersPasswordFromDB = ''
-    if (responseFromDatabase) {
-      usersPasswordFromDB = responseFromDatabase.password
+    if (getUserFromDB) {
+      usersPasswordFromDB = getUserFromDB.password
       isPasswordValid = bcrypt.compareSync(password, usersPasswordFromDB)
     }
     if (isPasswordValid) {
-      return responseFromDatabase
+      return getUserFromDB
     } throw projmanError(error.UNAUTHORIZED_REQUEST, 'Username or password is incorrect.')
   },
 
   generateUserToken: async (user) => {
     const token = jwt.sign({
-      username: user.id,
+      userId: user.id,
     },
       process.env.PRIVATE_KEY_VALUE,
       { expiresIn: process.env.TOKEN_EXPIRE })

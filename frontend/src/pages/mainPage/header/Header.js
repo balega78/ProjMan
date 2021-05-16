@@ -45,6 +45,7 @@ function Header({ user, logout }) {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
         localStorage.removeItem('rights');
+        //localStorage.removeItem('persist:root');
         logout()
         changeActiveButton('Kilépés');
       },
