@@ -3,9 +3,10 @@
 .app-header {
   background-color: $main-bg-color;
   font-size: 3vh;
-  height: 10vh;
+  height: 11vh;
   display: flex;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 1vh;
   justify-content: space-around;
 
   
@@ -20,10 +21,10 @@
   }
 
   .companyName {
-    font-size: 2.3vh;
+    font-size: 2vh;
     font-family: Work Sans, sans-serif;
     text-align: left;
-    font-weight: bold;
+    
     height: 9vh;
     background-color: white;
     padding-right: 10vh;

@@ -1,0 +1,13 @@
+.projectsTable {
+margin-top: 1vh;
+}
+
+.tableHeader {
+    font-size: 2.5vh;
+    color: white;
+    background-color: rgb(71, 95, 80);
+}
+
+.tableBody {
+    font-size: 1.8vh;
+}

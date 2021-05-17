@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function ProjectItem({projectData}) {
+export default function ProjectItem({ project }) {
 
     return (
-        <p className="ProjectName">
-            {projectData}
-        </p>
+        <tr>
+            <td>{project.name}</td>
+            <td>{project.aid.toLocaleString("hu-Hu")} ezer Ft</td>
+        </tr>
     )
 }
