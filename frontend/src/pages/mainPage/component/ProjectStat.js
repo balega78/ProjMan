@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 //import { projects, columnsOfTable } from './projectList/ProjectData.js'
 import ProjectItem from './ProjectItem.js'
 import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
 import './ProjectStat.css'
-
 import 'antd/dist/antd.css';
 import { fetchProjects } from '../../../actions/projectActions';
 
-function ProjectStat({ projects, fetchProjects }) {
+
+function ProjectStat({ projects, fetchProjects, setProject }) {
 
     useEffect(() => {
         fetchProjects()
@@ -27,7 +27,7 @@ function ProjectStat({ projects, fetchProjects }) {
                 <tbody className="tableBody">
                     {projects.map(item => {
                         return (
-                            <ProjectItem key={item.id} project={item}></ProjectItem>
+                            <ProjectItem key={item.id} project={item} ></ProjectItem>
                         )
                     })}
                 </tbody>
@@ -40,8 +40,7 @@ function ProjectStat({ projects, fetchProjects }) {
 const mapStateToProps = state => {
 
     return {
-        projects: state.projects,
-
+        projects: state.projects.projects
     };
 };
 

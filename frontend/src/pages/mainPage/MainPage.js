@@ -1,28 +1,32 @@
-import React from 'react';
 import ProjectStat from './component/ProjectStat';
 import { Router, Switch, Route } from 'react-router-dom';
 import history from '../../history';
 import Header from './header/Header';
 import StartHeader from './startHeader/StartHeader';
 import Login from '../login/Login'
+import Riport from './riport/Riport'
 import Registration from '../registration/Registration'
 import { connect } from 'react-redux'
+import { useState } from 'react';
 
-function MainPage({user, rights}) {
+function MainPage({ user, rights }) {
+
+  const [project, setProject] = useState(0)
+  console.log(project);
 
   return (
     <div className="App">
       <Router className="Router" history={history}>
 
-        {user && <Header user={user}/>}
+        {user && <Header user={user} />}
         {!user && <StartHeader />}
 
         <Switch>
           <Route path="/projektek">
-            <ProjectStat />
+            <ProjectStat setProject={setProject} />
           </Route>
           <Route path="/riport">
-            {/* <Riport /> */}
+            <Riport/>
           </Route>
           <Route path="/login">
             <Login />
