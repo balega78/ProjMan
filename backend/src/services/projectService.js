@@ -11,6 +11,4 @@ export const projectService = {
       }
     } throw projmanError(error.UNAUTHORIZED_REQUEST, 'Something went wrong')
   },
-
-
 }

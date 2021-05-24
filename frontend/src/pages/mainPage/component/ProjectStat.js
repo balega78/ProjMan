@@ -9,7 +9,7 @@ import 'antd/dist/antd.css';
 import { fetchProjects } from '../../../actions/projectActions';
 
 
-function ProjectStat({ projects, fetchProjects, setProject }) {
+function ProjectStat({ projects, fetchProjects }) {
 
     useEffect(() => {
         fetchProjects()
